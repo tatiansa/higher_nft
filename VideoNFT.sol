@@ -9,7 +9,8 @@ contract VideoNFT is ERC721URIStorage {
     constructor() ERC721("VideoNFT", "VNF") {}
 
     function mint() public {
+        tokenId++; // ++
         _safeMint(msg.sender, tokenId);
-        _setTokenURI(tokenId, "ipfs://bafkreidklctk3qg6zsvizon33zdpfvcyo33nidntogetfvajpymgksdsue"); // ;
+        _setTokenURI(tokenId, "ipfs://bafkreidklctk3qg6zsvizon33zdpfvcyo33nidntogetfvajpymgksdsue");
     }
 }
